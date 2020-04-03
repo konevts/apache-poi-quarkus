@@ -53,9 +53,9 @@ public class ExcelService {
 
         // Create Other rows and cells with employees data
         // Resize all columns to fit the content size
-//        for (int i=0; i<columns.length; i++) {
-//            sheet.autoSizeColumn(i);
-//        }
+        for (int i=0; i<columns.length; i++) {
+            sheet.autoSizeColumn(i);
+        }
 
         // Write the output to a file
         ByteArrayOutputStream fileOut = new ByteArrayOutputStream();
