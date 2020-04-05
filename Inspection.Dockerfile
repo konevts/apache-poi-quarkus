@@ -7,4 +7,4 @@ RUN chown -R quarkus /usr/src/app
 USER quarkus
 RUN mvn -f /usr/src/app/pom.xml package -Dmaven.test.skip=true
 EXPOSE 8080
-ENTRYPOINT ["java", "-Djava.awt.headless=true", "-agentlib:native-image-agent=config-merge-dir=/data/", "-jar",  "/usr/src/app/target/control-quarkus-1.0.0-SNAPSHOT-runner.jar"]
+ENTRYPOINT ["java", "-Djava.awt.headless=true", "-agentlib:native-image-agent=config-merge-dir=/data/", "-jar",  "/usr/src/app/target/apache-poi-quarkus-1.0.0-SNAPSHOT-runner.jar"]

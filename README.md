@@ -21,6 +21,13 @@ The application is now runnable using `java -jar target/apache-poi-quarkus-1.0.0
 
 ## Creating a native executable
 
+In case of developing on Windows native image has to be built in Docker:
+### Inspection build
+ ```shell script
+ docker build  -f inspection.Dockerfile -t apache-poi-inspection . 
+ docker run -p 8080:8080 -v c:/data:/data -t apache-poi-inspection
+```
+
 You can create a native executable using: `./mvnw package -Pnative`.
 
 Or, if you don't have GraalVM installed, you can run the native executable build in a container using: `./mvnw package -Pnative -Dquarkus.native.container-build=true`.
